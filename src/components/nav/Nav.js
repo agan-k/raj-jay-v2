@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {routes} from '../../router';
 import {NavItem} from './styled';
-import {Box} from '../../shared-primitives';
+import {Box} from '../../shared';
 
 export default function Nav() {
   const navigation = routes.map((route) => 
