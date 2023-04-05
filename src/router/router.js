@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import App from '../App';
 import {
   Bio,
@@ -9,7 +9,7 @@ import {
   Photos,
   Press,
   Videos
-} from '../pages'
+} from '../pages';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <Videos name={'Videos'}/>,
       },
     ],
-  }
-])
-export const routes = router.routes[0].children
+  },
+]);
+export const routes = router.routes[0].children;
 export default router;

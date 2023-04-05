@@ -5,4 +5,4 @@ export const NavItem = styled('span')(
   {
 
   }
-)
+);

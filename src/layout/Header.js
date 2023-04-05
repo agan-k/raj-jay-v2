@@ -1,4 +1,4 @@
-import {Nav} from '../components/nav'
+import {Nav} from '../components/nav';
 
 export default function Header() {
   return (
@@ -6,5 +6,5 @@ export default function Header() {
       <Nav />
       <hr></hr>
     </>
-  )
+  );
 }

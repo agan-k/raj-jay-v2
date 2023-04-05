@@ -1,1 +1,1 @@
-export {default as Press} from './Press'
+export {default as Press} from './Press';

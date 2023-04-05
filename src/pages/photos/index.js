@@ -1,1 +1,1 @@
-export {default as Photos} from './Photos'
+export {default as Photos} from './Photos';

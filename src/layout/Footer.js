@@ -4,5 +4,5 @@ export default function Footer() {
       <hr></hr>
       <p>Footer...</p>
     </>
-  )
+  );
 }
