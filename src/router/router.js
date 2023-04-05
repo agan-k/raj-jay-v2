@@ -18,35 +18,35 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/bio',
-        element: <Bio />,
+        element: <Bio name={'Bio'}/>,
       },
       {
         path: '/contact',
-        element: <Contact />,
+        element: <Contact name={'Contact'}/>,
       },
       {
         path: '/discography',
-        element: <Discography />,
+        element: <Discography name={'Disco'}/>,
       },
       {
         path: '/',
-        element: <Home />,
+        element: <Home name={'Home'}/>,
       },
       {
         path: '/links',
-        element: <Links />,
+        element: <Links name={'Links'}/>,
       },
       {
         path: '/photos',
-        element: <Photos />,
+        element: <Photos name={'Photos'}/>,
       },
       {
         path: '/press',
-        element: <Press />,
+        element: <Press name={'Press'}/>,
       },
       {
         path: '/videos',
-        element: <Videos />,
+        element: <Videos name={'Videos'}/>,
       },
     ],
   }
