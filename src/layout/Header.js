@@ -6,7 +6,6 @@ export default function Header() {
     <>
       <Nav />
       <SignUpForm />
-      <hr></hr>
     </>
   );
 }

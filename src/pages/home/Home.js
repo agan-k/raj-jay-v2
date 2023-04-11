@@ -2,8 +2,15 @@ import {useAllPrismicDocumentsByType, PrismicRichText} from '@prismicio/react';
 import {Box} from '../../shared';
 
 export default function Home() {
-  const feedData = useAllPrismicDocumentsByType('feed_item');
-  console.log(feedData);
+  const feedData = useAllPrismicDocumentsByType('feed_item', 
+    {
+      orderings: [
+        {
+          field: 'my.feed_item.date',
+          direction: 'desc',
+        },
+      ],
+    });
   const feed = feedData[0]?.map(item =>
     <Box key={item.id}>
       <p>{item.data.date}</p>
