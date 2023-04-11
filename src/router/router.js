@@ -8,7 +8,7 @@ import {
   Links,
   Photos,
   Press,
-  Videos
+  Videos,
 } from '../pages';
 
 const router = createBrowserRouter([
@@ -51,5 +51,11 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-export const routes = router.routes[0].children;
+export const routes = router.routes[0].children.map((item) => {
+  return {
+    path: item.path,
+    id: item.id,
+    name: item.element.props.name,
+  };
+});
 export default router;

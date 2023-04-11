@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <Box display={'flex'} justifyContent={'center'}>
-        ©<span>{currentYear}</span>&nbsp;Dominique Carre
+        ©<span>{currentYear}</span>&nbsp;Rajiv Jayaweera
       </Box>
       <Box display={'flex'} justifyContent={'center'}>
         <Text color={'lightGray'}>site by &nbsp;</Text>
