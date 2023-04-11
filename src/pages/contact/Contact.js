@@ -1,5 +1,5 @@
-import {useAllPrismicDocumentsByType} from "@prismicio/react";
-import {Box} from "../../shared";
+import {useAllPrismicDocumentsByType} from '@prismicio/react';
+import {Box} from '../../shared';
 
 export default function Contact() {
   const publicityData = useAllPrismicDocumentsByType('publicist');
@@ -16,6 +16,15 @@ export default function Contact() {
       <h1>Contact</h1>
       <Box m={4}>
         {publicists}
+      </Box>
+      <Box m={4}>
+        <form name='contact' method='POST' data-netlify='true'>
+          <input type='text' name='name' placeholder='name' />      
+          <input type='email' name='email' placeholder='e-mail' />      
+          <textarea name='message'></textarea>
+          <br/>     
+          <button type='submit'>Send</button>
+        </form>
       </Box>
     </>
   );
