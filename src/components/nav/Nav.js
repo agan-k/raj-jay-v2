@@ -7,7 +7,7 @@ import {externalLinks} from '../../constants';
 export default function Nav() {
   const pageNavigation = routes.map((route) => 
     <NavItem key={route.id}>
-      <Link to={route.path}>{route.element.props.name}</Link>
+      <Link to={route.path}>{route.name}</Link>
     </NavItem>
   );
   const externalNavigation = externalLinks.map((item) => 
