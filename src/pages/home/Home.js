@@ -13,10 +13,11 @@ export default function Home() {
     });
   const feed = feedData[0]?.map(item =>
     <Box key={item.id}>
-      <p>{item.data.date}</p>
-      <img src={item.data.image.url} width={'200px'} />
+      <h3>{item.data.date}</h3>
       <h2>{item.data.title}</h2>
+      <img src={item.data.image.url} width={'200px'} />
       <PrismicRichText field={item.data.description} />
+      <hr></hr>
     </Box>
   );
   return (
