@@ -6,7 +6,7 @@ export default function Shows() {
     orderings: [
       {
         field: 'my.event.timestamp',
-        direction: 'desc',
+        direction: 'asc',
       },
     ],
   });
