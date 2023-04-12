@@ -24,20 +24,23 @@ export default function Contact() {
           <input 
             type='text' 
             name='name' 
-            placeholder='your name' 
+            placeholder='your name - required'
+            required 
             style={{width: '200px'}} />      
           <br/>   
           <br/>   
           <input 
             type='email' 
             name='email' 
-            placeholder='your@e-mail' 
+            placeholder='your@e-mail - required'
+            required 
             style={{width: '200px'}}/>     
           <br/>   
           <br/>   
           <textarea 
             name='message' 
-            placeholder='your message' 
+            placeholder='your message - required'
+            required 
             style={{width: '300px', height: '150px'}}></textarea>
           <br/>   
           <button type='submit'>Send</button>
