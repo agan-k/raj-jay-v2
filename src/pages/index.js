@@ -5,4 +5,5 @@ export {Home} from './home';
 export {Links} from './links';
 export {Photos} from './photos';
 export {Press} from './press';
+export {Shows} from './shows';
 export {Videos} from './videos';

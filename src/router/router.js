@@ -8,6 +8,7 @@ import {
   Links,
   Photos,
   Press,
+  Shows,
   Videos,
 } from '../pages';
 
@@ -17,36 +18,40 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/bio',
-        element: <Bio name={'Bio'}/>,
-      },
-      {
-        path: '/contact',
-        element: <Contact name={'Contact'}/>,
-      },
-      {
-        path: '/discography',
-        element: <Discography name={'Disco'}/>,
-      },
-      {
         path: '/',
         element: <Home name={'Home'}/>,
       },
       {
-        path: '/links',
-        element: <Links name={'Links'}/>,
+        path: '/bio',
+        element: <Bio name={'Bio'}/>,
+      },
+      {
+        path: '/discography',
+        element: <Discography name={'Discography'}/>,
+      },
+      {
+        path: '/shows',
+        element: <Shows name={'Shows'}/>,
       },
       {
         path: '/photos',
         element: <Photos name={'Photos'}/>,
       },
       {
+        path: '/videos',
+        element: <Videos name={'Videos'}/>,
+      },
+      {
         path: '/press',
         element: <Press name={'Press'}/>,
       },
       {
-        path: '/videos',
-        element: <Videos name={'Videos'}/>,
+        path: '/contact',
+        element: <Contact name={'Contact'}/>,
+      },
+      {
+        path: '/links',
+        element: <Links name={'Links'}/>,
       },
     ],
   },
