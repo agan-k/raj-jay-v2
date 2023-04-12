@@ -11,6 +11,8 @@ export default function Shows() {
     ],
   });
   //TODO: validate fields
+  //TODO: Render automatically upcoming events in one component and
+  // past (expired) in separate component below
   const events = showsData[0]?.map((event) => {
     const lineup = event.data.lineup.map((l, index) => 
       <li key={l.name + index}>
