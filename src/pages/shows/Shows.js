@@ -10,10 +10,10 @@ export default function Shows() {
       },
     ],
   });
-  
+  //TODO: validate fields
   const events = showsData[0]?.map((event) => {
-    const lineup = event.data.lineup.map(l => 
-      <li key={l.id}>
+    const lineup = event.data.lineup.map((l, index) => 
+      <li key={l.name + index}>
         <span>{l.name}&nbsp;-&nbsp;</span>
         <span>{l.instrument}</span>
       </li>
@@ -39,7 +39,7 @@ export default function Shows() {
       </Box>
     );
   });
-  
+
   return (
     <>
       <h1>Shows</h1>
