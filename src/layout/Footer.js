@@ -4,7 +4,7 @@ import {Box, Text} from '../shared';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <>
+    <Box mt={5} pt={3} borderTop={'1px solid grey'}>
       <Box display={'flex'} justifyContent={'center'}>
         ©<span>{currentYear}</span>&nbsp;Rajiv Jayaweera
       </Box>
@@ -14,7 +14,7 @@ export default function Footer() {
           <Text color={'primary'}>FormVsContent</Text>
         </Link>
       </Box>
-    </>
+    </Box>
   );
 }
 

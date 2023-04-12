@@ -14,14 +14,18 @@ export default function Contact() {
   return (
     <>
       <h1>Contact</h1>
-      <Box m={4}>{publicists}</Box>
-      <Box m={4}>
+      <Box my={4}>{publicists}</Box>
+      <Box my={4}>
         <form name='contact' method='POST' data-netlify='true'>
           <input type='hidden' name='form-name' value='contact' />
           <input type='text' name='name' placeholder='name' />      
-          <input type='email' name='email' placeholder='e-mail' />      
+          <br/>   
+          <br/>   
+          <input type='email' name='email' placeholder='e-mail' />     
+          <br/>   
+          <br/>   
           <textarea name='message'></textarea>
-          <br/>     
+          <br/>   
           <button type='submit'>Send</button>
         </form>
       </Box>
