@@ -1,6 +1,6 @@
 import {Text} from '../../shared';
 
-export default function SignUpForm() {
+export default function MailingListForm() {
   return(
     <>
       <Text>mailing list:</Text>
