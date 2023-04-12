@@ -5,15 +5,12 @@ export default function SignUpForm() {
     <>
       <Text>mailing list:</Text>
       <form 
-        name='signup' 
-        action='/formSubmission' 
+        name='mailing-list' 
         method='POST' 
         data-netlify='true'>
-        <input type='hidden' name='form-name' value='signup' />
-        <label htmlFor='yourcity' />
-        <input type='text' name='city' id='yourcity' placeholder='city' />
-        <label htmlFor='email' />
-        <input type='email' name='email' id='youremail' placeholder='e-mail' />
+        <input type='hidden' name='form-name' value='mailing-list' />
+        <input type='text' name='city' placeholder='city' />
+        <input type='email' name='email' placeholder='your@e-mail' />
         <button type='submit'>join</button>
       </form>
     </>
