@@ -1,5 +1,5 @@
 import {useAllPrismicDocumentsByType} from '@prismicio/react';
-import {Box} from '../../shared';
+import {Box, Text} from '../../shared';
 
 export default function Contact() {
   const publicityData = useAllPrismicDocumentsByType('publicist');
@@ -14,17 +14,31 @@ export default function Contact() {
   return (
     <>
       <h1>Contact</h1>
-      <Box my={4}>{publicists}</Box>
       <Box my={4}>
+        {publicists}
+      </Box>
+      <Box my={4}>
+        <Text mb={1}>Contact Rajiv Jayaweera:</Text>
         <form name='contact' method='POST' data-netlify='true'>
-          <input type='hidden' name='form-name' value='contact' />
-          <input type='text' name='name' placeholder='name' />      
+          <input type='hidden' name='form-name' value='contact'/>
+          <input 
+            type='text' 
+            name='name' 
+            placeholder='your name' 
+            style={{width: '200px'}} />      
           <br/>   
           <br/>   
-          <input type='email' name='email' placeholder='e-mail' />     
+          <input 
+            type='email' 
+            name='email' 
+            placeholder='your@e-mail' 
+            style={{width: '200px'}}/>     
           <br/>   
           <br/>   
-          <textarea name='message'></textarea>
+          <textarea 
+            name='message' 
+            placeholder='your message' 
+            style={{width: '300px', height: '150px'}}></textarea>
           <br/>   
           <button type='submit'>Send</button>
         </form>

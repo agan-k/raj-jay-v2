@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import {typography, space, color} from 'styled-system';
+import {
+  space, 
+  color, 
+  typography,
+  layout,
+} from 'styled-system';
 
-const Text  = styled('div')(
-  {
-    space,
-    typography,
-    color,
-  }
+const Text = styled('div')(
+  space,
+  color,
+  typography,
+  layout
 );
 export default Text;

@@ -9,7 +9,7 @@ export default function Footer() {
         ©<span>{currentYear}</span>&nbsp;Rajiv Jayaweera
       </Box>
       <Box display={'flex'} justifyContent={'center'}>
-        <Text color={'lightGray'}>site by &nbsp;</Text>
+        <Text>site by &nbsp;</Text>
         <Link to={'https://formversuscontent.com'} target='_blank'>
           <Text color={'primary'}>FormVsContent</Text>
         </Link>
