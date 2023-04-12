@@ -26,12 +26,12 @@ const router = createBrowserRouter([
         element: <Bio name={'Bio'}/>,
       },
       {
-        path: '/discography',
-        element: <Discography name={'Discography'}/>,
-      },
-      {
         path: '/shows',
         element: <Shows name={'Shows'}/>,
+      },
+      {
+        path: '/discography',
+        element: <Discography name={'Discography'}/>,
       },
       {
         path: '/photos',
