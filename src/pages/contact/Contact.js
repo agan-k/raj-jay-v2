@@ -3,12 +3,11 @@ import {Box, Text} from '../../shared';
 
 export default function Contact() {
   const publicityData = useAllPrismicDocumentsByType('publicist');
-
   const publicists = publicityData[0]?.map((publicist) =>
     <Box key={publicist.id}>
       <span>{publicist.data.name}</span>
       <span>{publicist.data.region}&nbsp;publicity:&nbsp;</span>
-      <a href={publicist.data.url}>contact</a>
+      <a href={publicist.data.link.url}>contact</a>
     </Box>
   );
   return (
