@@ -20,16 +20,25 @@ export default function Discography() {
     );
     const hasLineup = Boolean(album.data.lineup.length !== 0);
     const label = album.data.label || null;
+    const releaseDate = album.data.release_date || null;
     const notes = album.data.notes || null;
     const hasLabel = Boolean(album.data.label !== null);
     const hasNotes = Boolean(album.data.notes !== null);
+    const hasReleaseDate = Boolean(album.data.release_date !== null);
 
     return (
       <Box key={album.id} mb={6} borderBottom={'1px solid grey'}>
         <img src={album.data.artwork.url}  width='200px'/>
         <SmallHeading mb={0}>{album.data.artist}</SmallHeading>
         <span>{album.data.title}</span>
-        {hasLabel ?  <span>&nbsp;-&nbsp;{label}</span> : ''}
+        {hasLabel ?  
+          <span>&nbsp;{label.toLowerCase()}</span> 
+          : ''
+        }
+        {hasReleaseDate ?  
+          <span>&nbsp;{new Date(releaseDate).getFullYear()}</span>
+          : ''
+        }
        
         {hasLineup ? <ul>{lineup}</ul> : ''}
         {hasNotes ? <PrismicRichText field={notes} /> : ''}
