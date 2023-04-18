@@ -13,7 +13,7 @@ export const MasonryWrapper = styled(Box)(
       width: 'auto',
     },
     '.my-masonry-grid_column': {
-      paddingLeft: '20px', /* gutter size */
+      paddingLeft: theme.space[4], /* gutter size */
       backgroundClip: 'padding-box',
     },
 
@@ -38,7 +38,7 @@ export const FeedItemWrapper = styled(Box)(
 );
 export const FeedWrapper = styled(Box)(
   {
-    
+    paddingLeft: theme.space[4],
   },
   mediaQuery(
     {

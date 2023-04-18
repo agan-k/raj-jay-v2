@@ -7,3 +7,4 @@ export {Photos} from './photos';
 export {Press} from './press';
 export {Shows} from './shows';
 export {Videos} from './videos';
+export {masonryBreakpoints} from './constants';
