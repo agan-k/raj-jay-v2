@@ -21,6 +21,7 @@ export const theme = {
     body: 'system-ui, sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
+    marvel: 'Marvel, sans-serif',
   },
   fontWeights: {
     body: 400,
