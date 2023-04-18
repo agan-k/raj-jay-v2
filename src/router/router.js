@@ -19,39 +19,39 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home name={'Home'}/>,
+        element: <Home name={'home'}/>,
       },
       {
         path: '/bio',
-        element: <Bio name={'Bio'}/>,
+        element: <Bio name={'bio'}/>,
       },
       {
         path: '/shows',
-        element: <Shows name={'Shows'}/>,
+        element: <Shows name={'shows'}/>,
       },
       {
         path: '/discography',
-        element: <Discography name={'Discography'}/>,
+        element: <Discography name={'discography'}/>,
       },
       {
         path: '/photos',
-        element: <Photos name={'Photos'}/>,
+        element: <Photos name={'photos'}/>,
       },
       {
         path: '/videos',
-        element: <Videos name={'Videos'}/>,
+        element: <Videos name={'videos'}/>,
       },
       {
         path: '/press',
-        element: <Press name={'Press'}/>,
+        element: <Press name={'press'}/>,
       },
       {
         path: '/contact',
-        element: <Contact name={'Contact'}/>,
+        element: <Contact name={'contact'}/>,
       },
       {
         path: '/links',
-        element: <Links name={'Links'}/>,
+        element: <Links name={'links'}/>,
       },
     ],
   },

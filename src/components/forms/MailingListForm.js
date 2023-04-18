@@ -1,9 +1,9 @@
-import {Text} from '../../shared';
+import {Flex} from '../../shared';
 
 export default function MailingListForm() {
   return(
-    <>
-      <Text>mailing list:</Text>
+    <Flex flex={'1 0 50%'} justifyContent={'end'}>
+      <Flex alignItems={'center'}>mailing list:</Flex>
       <form 
         name='mailing-list' 
         method='POST' 
@@ -21,6 +21,6 @@ export default function MailingListForm() {
           required />
         <button type='submit'>join</button>
       </form>
-    </>
+    </Flex>
   );
 }
