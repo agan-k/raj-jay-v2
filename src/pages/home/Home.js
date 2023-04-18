@@ -1,5 +1,6 @@
 import {useAllPrismicDocumentsByType, PrismicRichText} from '@prismicio/react';
-import {Box} from '../../shared';
+import Masonry from 'react-masonry-css';
+import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
 
 export default function Home() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -12,20 +13,24 @@ export default function Home() {
       ],
     });
   const feed = feedData[0]?.map(item =>
-    <Box key={item.id}>
+    <FeedItemWrapper key={item.id} className='feed-item'>
       <h3>{item.data.date}</h3>
       <h2>{item.data.title}</h2>
       <img src={item.data.image.url} width={'200px'} />
       <PrismicRichText field={item.data.description} />
-      <hr></hr>
-    </Box>
+    </FeedItemWrapper>
   );
+  
   return (
-    <>
-      <h1>Home</h1>
-      <h2>News:</h2>
-      <hr></hr>
-      {feed}
-    </>
+    <FeedWrapper backgroundColor={'background'}>
+      <MasonryWrapper>
+        <Masonry
+          breakpointCols={4}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column">
+          {feed}
+        </Masonry>
+      </MasonryWrapper>
+    </FeedWrapper>
   ); 
 }
