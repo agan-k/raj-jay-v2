@@ -27,10 +27,10 @@ export default function Home() {
   );
   
   return (
-    <FeedWrapper pt={8}>
+    <FeedWrapper pt={'250px'}>
       <MasonryWrapper>
         <Masonry
-          breakpointCols={masonryBreakpoints(5)}
+          breakpointCols={masonryBreakpoints(6)}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column">
           {feed}

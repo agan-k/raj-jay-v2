@@ -12,7 +12,7 @@ export const MasonryWrapper = styled(Box)(
       width: 'auto',
     },
     '.my-masonry-grid_column': {
-      paddingLeft: theme.space[4], /* gutter size */
+      paddingLeft: theme.space[1], /* gutter size */
       backgroundClip: 'padding-box',
     },
 
@@ -22,13 +22,18 @@ export const MasonryWrapper = styled(Box)(
   )
 );
 export const FeedItemWrapper = styled(Box)(
-  {},
+  {
+    p: {
+      fontFamily: 'Open Sans',
+      fontSize: theme.fontSizes[0],
+    },
+  },
   mediaQuery(
     {
       background: theme.colors.muted,
       color: 'black',
       // border: `1px solid ${theme.colors.muted}`,
-      marginBottom: theme.space[4],
+      marginBottom: theme.space[1],
       // padding: theme.space[4],
       // paddingTop: theme.space[1],
     }
