@@ -6,13 +6,13 @@ import {HeaderWrapper} from './styled';
 export default function Header() {
   return (
     <HeaderWrapper>
-      <Flex>
+      <Flex justifyContent={'space-between'}>
         <Flex alignItems={'center'}>RAJIV JAYAWEERA</Flex>
-        <MailingListForm />
-      </Flex>
-      <Flex justifyContent={'end'}>
         <Nav />
       </Flex>
+      <Flex justifyContent={'end'}>
+      </Flex>
+      <MailingListForm />
 
     </HeaderWrapper>
   );

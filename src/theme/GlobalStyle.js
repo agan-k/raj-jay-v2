@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 import {theme} from './theme';
-import banner from '../assets/images/gallery-02.jpeg';
+import banner from '../assets/images/home-banner.jpg';
 
 export const GlobalStyle = createGlobalStyle(
   {

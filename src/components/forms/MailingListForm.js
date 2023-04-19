@@ -2,7 +2,7 @@ import {Flex} from '../../shared';
 
 export default function MailingListForm() {
   return(
-    <Flex flex={'1 0 50%'} justifyContent={'end'}>
+    <Flex flex={'1 0 50%'} justifyContent={'end'} mt={5}>
       <Flex alignItems={'center'}>mailing list:</Flex>
       <form 
         name='mailing-list' 
