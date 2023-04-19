@@ -6,7 +6,7 @@ export const masonryBreakpoints = (defaultNumOfColumns) => {
   });
   const Obj = {};
   breakpoints.map((breakpoint, index) => {
-    Obj[breakpoint] = index + 1;
+    Obj[breakpoint] = index !== breakpoints.length ? index + 1 : index + 2;
   });
   Obj.default = defaultNumOfColumns;
   return Obj;

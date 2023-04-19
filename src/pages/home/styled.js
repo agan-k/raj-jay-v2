@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import {Box} from '../../shared';
 import {mediaQuery} from '../../utils';
 import {theme} from '../../theme';
-
 export const MasonryWrapper = styled(Box)(
   {
     '.my-masonry-grid': {
       display: '-webkit-box',
       display: '-ms-flexbox',
       display: 'flex',
-      marginLeft: '-30px', /* gutter size offset */
+      marginLeft: - theme.space[4], /* gutter size offset */
       width: 'auto',
     },
     '.my-masonry-grid_column': {
@@ -19,18 +18,16 @@ export const MasonryWrapper = styled(Box)(
 
   },
   mediaQuery(
-    {
-    }
+    {}
   )
 );
 export const FeedItemWrapper = styled(Box)(
-  {
-
-  },
+  {},
   mediaQuery(
     {
-      background: theme.colors.background,
+      background: theme.colors.dimGray,
       border: `1px solid ${theme.colors.muted}`,
+      // borderRadius: '5px',
       marginBottom: theme.space[4],
       padding: theme.space[2],
     }
@@ -38,7 +35,6 @@ export const FeedItemWrapper = styled(Box)(
 );
 export const FeedWrapper = styled(Box)(
   {
-    paddingLeft: theme.space[4],
   },
   mediaQuery(
     {
