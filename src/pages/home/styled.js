@@ -25,11 +25,12 @@ export const FeedItemWrapper = styled(Box)(
   {},
   mediaQuery(
     {
-      background: theme.colors.dimGray,
-      border: `1px solid ${theme.colors.muted}`,
-      // borderRadius: '5px',
+      background: theme.colors.muted,
+      color: 'black',
+      // border: `1px solid ${theme.colors.muted}`,
       marginBottom: theme.space[4],
-      padding: theme.space[2],
+      // padding: theme.space[4],
+      // paddingTop: theme.space[1],
     }
   )
 );
