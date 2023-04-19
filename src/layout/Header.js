@@ -1,10 +1,11 @@
 import {Nav} from '../components/nav';
 import {MailingListForm} from '../components/forms';
-import {Flex, Box} from '../shared';
+import {Flex} from '../shared';
+import {HeaderWrapper} from './styled';
 
 export default function Header() {
   return (
-    <Box>
+    <HeaderWrapper>
       <Flex>
         <Flex alignItems={'center'}>RAJIV JAYAWEERA</Flex>
         <MailingListForm />
@@ -13,6 +14,6 @@ export default function Header() {
         <Nav />
       </Flex>
 
-    </Box>
+    </HeaderWrapper>
   );
 }
