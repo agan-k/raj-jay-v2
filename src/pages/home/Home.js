@@ -8,9 +8,10 @@ export default function Home() {
   const [ctaData] = useSinglePrismicDocument('home_cta');
   const imageUrl = ctaData?.data.image.url;
   const description = ctaData?.data.description;
+  console.log(ctaData)
   const CtaButton = () => {
     return(
-      <Link to={ctaData?.data.link}>
+      <Link to={ctaData?.data.link.url}>
         <Text 
           fontSize={theme.fontSizes[4]}
           backgroundColor={theme.colors.primary}
@@ -29,7 +30,7 @@ export default function Home() {
           <Box flex={'1 0 40%'}>
             <img src={imageUrl} />
           </Box>
-          <Box flex={'1 0 40%'}>
+          <Box flex={'1 0 60%'}>
             <SmallHeading>{description}</SmallHeading>
             <CtaButton />
           </Box>
