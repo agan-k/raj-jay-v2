@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {useSinglePrismicDocument} from '@prismicio/react';
 import {CTAWrapper, HomeWrapper} from './styled';
 import {Box, Text, Flex, SmallHeading} from '../../shared';
@@ -9,14 +10,16 @@ export default function Home() {
   const description = ctaData?.data.description;
   const CtaButton = () => {
     return(
-      <Text 
-        fontSize={theme.fontSizes[4]}
-        backgroundColor={theme.colors.primary}
-        padding={4}
-        textAlign={'center'}
-      >
-        {ctaData?.data.button}
-      </Text>
+      <Link to={ctaData?.data.link}>
+        <Text 
+          fontSize={theme.fontSizes[4]}
+          backgroundColor={theme.colors.primary}
+          padding={4}
+          textAlign={'center'}
+        >
+          {ctaData?.data.button}
+        </Text>
+      </Link>
     );
   };
   return (
@@ -28,7 +31,7 @@ export default function Home() {
           </Box>
           <Box flex={'1 0 40%'}>
             <SmallHeading>{description}</SmallHeading>
-            <CtaButton/>
+            <CtaButton />
           </Box>
         </Flex>
       </CTAWrapper>

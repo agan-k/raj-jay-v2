@@ -18,6 +18,13 @@ export const CTAWrapper = styled(Box)(
     img: {
       width: theme.space[8],
     },
+    'a:any-link': {
+      color: 'white',
+      textDecoration: 'none',
+    },
+    'a:hover': {
+      color: 'black',
+    },
   },
   mediaQuery(
     {
