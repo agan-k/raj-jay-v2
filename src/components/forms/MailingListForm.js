@@ -1,8 +1,9 @@
 import {Flex} from '../../shared';
+import {FormWrapper} from './styled';
 
 export default function MailingListForm() {
   return(
-    <Flex flex={'1 0 50%'} justifyContent={'end'} mt={5}>
+    <FormWrapper>
       <Flex alignItems={'center'}>mailing list:</Flex>
       <form 
         name='mailing-list' 
@@ -12,15 +13,15 @@ export default function MailingListForm() {
         <input 
           type='text' 
           name='city' 
-          placeholder='your city - required' 
+          placeholder='your city' 
           required />
         <input 
           type='email' 
           name='email' 
-          placeholder='your@e-mail - required' 
+          placeholder='your@e-mail' 
           required />
         <button type='submit'>join</button>
       </form>
-    </Flex>
+    </FormWrapper>
   );
 }
