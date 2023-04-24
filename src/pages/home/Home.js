@@ -8,7 +8,6 @@ export default function Home() {
   const [ctaData] = useSinglePrismicDocument('home_cta');
   const imageUrl = ctaData?.data.image.url;
   const description = ctaData?.data.description;
-  console.log(ctaData)
   const CtaButton = () => {
     return(
       <Link to={ctaData?.data.link.url}>
