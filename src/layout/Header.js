@@ -5,7 +5,7 @@ import {HeaderWrapper} from './styled';
 
 export default function Header() {
   return (
-    <HeaderWrapper height={'300px'}>
+    <HeaderWrapper>
       <Flex justifyContent={'space-between'}>
         <Flex alignItems={'center'}>RAJIV JAYAWEERA</Flex>
         <Nav />

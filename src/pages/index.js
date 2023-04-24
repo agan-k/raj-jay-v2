@@ -3,6 +3,7 @@ export {Contact} from './contact';
 export {Discography} from './discography';
 export {Home} from './home';
 export {Links} from './links';
+export {News} from './news';
 export {Photos} from './photos';
 export {Press} from './press';
 export {Shows} from './shows';

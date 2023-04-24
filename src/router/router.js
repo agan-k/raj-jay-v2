@@ -6,6 +6,7 @@ import {
   Discography,
   Home,
   Links,
+  News,
   Photos,
   Press,
   Shows,
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home name={'home'}/>,
+      },
+      {
+        path: '/news',
+        element: <News name={'news'}/>,
       },
       {
         path: '/bio',
