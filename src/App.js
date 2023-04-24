@@ -17,9 +17,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper location={path}>
-        <Header />
+        <Header location={path}/>
         <Outlet />
-        <Footer />
+        <Footer location={path}/>
       </Wrapper>
     </ThemeProvider>
   );

@@ -6,6 +6,7 @@ import {theme} from '../../theme';
 export const HomeWrapper = styled(Box)(
   {
     minHeight: '100vh',
+    color: theme.colors.muted,
   },
   mediaQuery(
     {

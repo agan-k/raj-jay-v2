@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import {Nav} from '../components/nav';
 import {MailingListForm} from '../components/forms';
 import {Flex} from '../shared';
 import {HeaderWrapper} from './styled';
 
-export default function Header() {
+export default function Header({location}) {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper location={location}>
       <Flex justifyContent={'space-between'}>
         <Flex alignItems={'center'}>RAJIV JAYAWEERA</Flex>
         <Nav />
@@ -17,3 +18,7 @@ export default function Header() {
     </HeaderWrapper>
   );
 }
+
+Header.propTypes = {
+  location: PropTypes.string,
+};
