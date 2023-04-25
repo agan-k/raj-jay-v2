@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import { position } from 'styled-system';
 import {Box, Text} from '../shared';
 
 export default function Footer({location}) {
