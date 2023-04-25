@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {routes} from '../../router';
 import {NavItem} from './styled';
-import {Flex} from '../../shared';
+import {Box} from '../../shared';
 import {externalLinks} from '../../constants';
 
 export default function Nav() {
@@ -17,9 +17,13 @@ export default function Nav() {
   );
 
   return(
-    <Flex flexWrap={'wrap'}>
-      {pageNavigation}
-      {externalNavigation}
-    </Flex>
+    <Box display={['block', 'block', 'flex']} flexWrap={'wrap'}>
+      <Box display={['block', 'block', 'flex']}>
+        {pageNavigation}
+      </Box>
+      <Box display={['block', 'block', 'flex']}>
+        {externalNavigation}
+      </Box>
+    </Box>
   );
 }
