@@ -15,7 +15,6 @@ export const HomeWrapper = styled(Box)(
 );
 export const CTAWrapper = styled(Box)(
   {
-    // marginTop: theme.space[6],
     'a:any-link': {
       color: 'white',
       textDecoration: 'none',
