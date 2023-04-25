@@ -9,7 +9,6 @@ export const HomeWrapper = styled(Box)(
   },
   mediaQuery(
     {
-      minHeight: ['', '', '100vh'],
     }
   )
 );
@@ -17,7 +16,6 @@ export const CTAWrapper = styled(Box)(
   {
     'a:any-link': {
       color: 'white',
-      textDecoration: 'none',
     },
     'a:hover': {
       color: 'black',

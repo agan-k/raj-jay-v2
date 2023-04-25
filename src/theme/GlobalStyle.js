@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle(
       margin: '0 auto',
       'a:any-link': {
         color: theme.colors.primary,
+        textDecoration: 'none',
       },
       'a:hover': {
         color: theme.colors.muted,
