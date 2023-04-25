@@ -26,7 +26,7 @@ export default function Nav() {
           <Link to={STORE_URL}>store</Link>
         </NavItem>
       </Box>
-      <Box display={'flex'} justifyContent={'end'}>
+      <Box display={'flex'} justifyContent={'end'} mt={'-2px'}>
         {social}
       </Box>
     </Box>
