@@ -10,18 +10,22 @@ export default function Home() {
   const description = ctaData?.data.description;
   const CtaButton = () => {
     return(
-      <Link to={ctaData?.data.link.url}>
-        <Text 
-          width={[1/2, 1/2, 1/3]}
-          margin={'10px auto'}
-          fontSize={4}
-          backgroundColor={theme.colors.primary}
-          padding={4}
-          textAlign={'center'}
-        >
-          {ctaData?.data.button}
-        </Text>
-      </Link>
+      <Box 
+        display={'flex'} 
+        justifyContent={['center', 'center', 'start']} 
+        ml={['', '', 4]}
+      >
+        <Link to={ctaData?.data.link.url}>
+          <Text 
+            fontSize={4}
+            backgroundColor={theme.colors.primary}
+            padding={4}
+            textAlign={'center'}
+          >
+            {ctaData?.data.button}
+          </Text>
+        </Link>
+      </Box>
     );
   };
   return (

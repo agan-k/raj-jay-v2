@@ -7,11 +7,9 @@ export const HomeWrapper = styled(Box)(
   {
     color: theme.colors.muted,
   },
-  mediaQuery(
-    {
-      // height: ['', '', '80vh'],
-    }
-  )
+  mediaQuery({
+
+  })
 );
 export const CTAWrapper = styled(Box)(
   {
