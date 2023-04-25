@@ -1,1 +1,1 @@
-export {externalLinks} from './constants';
+export {SOCIAL_LINKS, STORE_URL} from './constants';

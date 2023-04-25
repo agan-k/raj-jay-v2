@@ -7,6 +7,9 @@ export const NavItem = styled('span')(
   {
     padding: '5px',
     display: 'block',
+    '.screen-reader': {
+      display: 'none',
+    },
   },
   mediaQuery({
     textAlign: ['right', 'right', 'unset'],

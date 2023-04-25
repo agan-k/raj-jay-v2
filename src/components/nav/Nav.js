@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import {routes} from '../../router';
 import {NavItem} from './styled';
 import {Box} from '../../shared';
-import {externalLinks} from '../../constants';
+import {SOCIAL_LINKS, STORE_URL} from '../../constants';
 
 export default function Nav() {
   const pageNavigation = routes.map((route) => 
@@ -10,9 +10,11 @@ export default function Nav() {
       <Link to={route.path}>{route.name}</Link>
     </NavItem>
   );
-  const externalNavigation = externalLinks.map((item) => 
+  const social = SOCIAL_LINKS.map((item) => 
     <NavItem key={item.name}>
-      <Link to={item.url}>{item.name}</Link>
+      <Link to={item.url} className={item.faClassName}>
+        <span className='screen-reader'>{item.name}</span>
+      </Link>
     </NavItem>
   );
 
@@ -20,9 +22,12 @@ export default function Nav() {
     <Box display={['block', 'block', 'flex']} flexWrap={'wrap'}>
       <Box display={['block', 'block', 'flex']}>
         {pageNavigation}
+        <NavItem>
+          <Link to={STORE_URL}>store</Link>
+        </NavItem>
       </Box>
-      <Box display={['block', 'block', 'flex']}>
-        {externalNavigation}
+      <Box display={'flex'} justifyContent={'end'}>
+        {social}
       </Box>
     </Box>
   );
