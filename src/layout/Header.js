@@ -17,7 +17,6 @@ export default function Header({location}) {
       <Flex justifyContent={'end'}>
       </Flex>
       <MailingListForm />
-
     </HeaderWrapper>
   );
 }

@@ -12,7 +12,7 @@ export default function Home() {
     return(
       <Link to={ctaData?.data.link.url}>
         <Text 
-          width={1/3}
+          width={[1/2, 1/2, 1/3]}
           margin={'10px auto'}
           fontSize={4}
           backgroundColor={theme.colors.primary}
@@ -27,11 +27,17 @@ export default function Home() {
   return (
     <HomeWrapper>
       <CTAWrapper>
-        <Flex justifyContent={'center'} flex={'2 0 30%'}>
+        <Flex justifyContent={'center'}>
           <img src={imageUrl} />
         </Flex>
         <Box flex={'1 0 70%'}>
-          <SmallHeading fontSize>{description}</SmallHeading>
+          <SmallHeading 
+            textAlign={['center', 'center', 'initial']} 
+            fontSize={[3, 2, 4]} 
+            p={[4, 4, '']}
+          >
+            {description}
+          </SmallHeading>
           <CtaButton />
         </Box>
       </CTAWrapper>

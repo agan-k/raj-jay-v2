@@ -9,6 +9,7 @@ export const HomeWrapper = styled(Box)(
   },
   mediaQuery(
     {
+      // height: ['', '', '80vh'],
     }
   )
 );
@@ -23,12 +24,15 @@ export const CTAWrapper = styled(Box)(
   },
   mediaQuery(
     {
-      display: ['unset', 'unset', 'flex'],
+      background: ['rgba(0, 0, 0, 0.7)', 'black', 'none'],
+      display: ['', '', 'flex'],
       gap: ['', '', theme.space[5]],
-      width: ['', '', '70%'],
-      margin: [theme.space[6], theme.space[6], theme.space[6]],
+      width: ['100%', '', '70%'],
+      margin: ['', '', theme.space[6]],
+      paddingTop: [theme.space[6], theme.space[6], ''],
+      paddingBottom: [theme.space[6], theme.space[6], ''],
       img: {
-        width: ['80%', '', '100%'],
+        width: ['60%', '', '100%'],
       },
     }
   )
