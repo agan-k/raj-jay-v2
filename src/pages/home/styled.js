@@ -5,19 +5,17 @@ import {theme} from '../../theme';
 
 export const HomeWrapper = styled(Box)(
   {
-    minHeight: '100vh',
     color: theme.colors.muted,
   },
   mediaQuery(
     {
+      minHeight: ['', '', '100vh'],
     }
   )
 );
 export const CTAWrapper = styled(Box)(
   {
-    img: {
-      width: theme.space[8],
-    },
+    // marginTop: theme.space[6],
     'a:any-link': {
       color: 'white',
       textDecoration: 'none',
@@ -28,8 +26,13 @@ export const CTAWrapper = styled(Box)(
   },
   mediaQuery(
     {
-      width: ['', '', '50%'],
-      padding: ['', '', theme.space[6]],
+      display: ['unset', 'unset', 'flex'],
+      gap: ['', '', theme.space[5]],
+      width: ['', '', '70%'],
+      margin: [theme.space[6], theme.space[6], theme.space[6]],
+      img: {
+        width: ['80%', '', '100%'],
+      },
     }
   )
 );

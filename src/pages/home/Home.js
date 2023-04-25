@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {useSinglePrismicDocument} from '@prismicio/react';
 import {CTAWrapper, HomeWrapper} from './styled';
-import {Box, Text, Flex, SmallHeading} from '../../shared';
+import {Box, Text, SmallHeading, Flex} from '../../shared';
 import {theme} from '../../theme';
 
 export default function Home() {
@@ -12,7 +12,9 @@ export default function Home() {
     return(
       <Link to={ctaData?.data.link.url}>
         <Text 
-          fontSize={theme.fontSizes[4]}
+          width={1/3}
+          margin={'10px auto'}
+          fontSize={4}
           backgroundColor={theme.colors.primary}
           padding={4}
           textAlign={'center'}
@@ -25,15 +27,13 @@ export default function Home() {
   return (
     <HomeWrapper>
       <CTAWrapper>
-        <Flex>
-          <Box flex={'1 0 40%'}>
-            <img src={imageUrl} />
-          </Box>
-          <Box flex={'1 0 60%'}>
-            <SmallHeading>{description}</SmallHeading>
-            <CtaButton />
-          </Box>
+        <Flex justifyContent={'center'} flex={'2 0 30%'}>
+          <img src={imageUrl} />
         </Flex>
+        <Box flex={'1 0 70%'}>
+          <SmallHeading fontSize>{description}</SmallHeading>
+          <CtaButton />
+        </Box>
       </CTAWrapper>
     </HomeWrapper>
   ); 
