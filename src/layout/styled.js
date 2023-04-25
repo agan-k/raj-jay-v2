@@ -8,7 +8,6 @@ export const HeaderWrapper = styled(Box)(
     color: props => (props.location === '/' ? theme.colors.muted : 'black'),
     'a:any-link': {
       color: props => (props.location === '/' ? theme.colors.muted : 'black'),
-      padding: theme.space[1],
     },
     'a:hover': {
       color: theme.colors.primary,
@@ -30,5 +29,19 @@ export const FooterWrapper = styled(Box)(
     display: ['', '', 'flex'], 
     maxHeight: ['200px', '200px', '100px'], 
     marginTop: [theme.space[6], theme.space[6], 'unset'],
+  })
+);
+export const MenuIconWrapper = styled(Box)(
+  {
+    'div': {
+      width: '20px',
+      height: '2px',
+      background: 'white',
+      margin: theme.space[1],
+    },
+  },
+  mediaQuery({
+    display: ['', '', 'none'],
+
   })
 );

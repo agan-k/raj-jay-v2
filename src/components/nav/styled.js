@@ -6,15 +6,17 @@ export const NavItem = styled('span')(
   //https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/
   {
     padding: '5px',
+    paddingRight: '0',
     display: 'block',
     '.screen-reader': {
       display: 'none',
     },
+    a: {
+      padding: theme.space[1],
+      paddingRight: '0',
+    },
   },
   mediaQuery({
     textAlign: ['right', 'right', 'unset'],
-    a: {
-      padding: [theme.space[2], theme.space[2], 'unset'],
-    },
   })
 );
