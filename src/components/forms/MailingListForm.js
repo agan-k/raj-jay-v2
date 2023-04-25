@@ -4,11 +4,12 @@ import {FormWrapper} from './styled';
 export default function MailingListForm() {
   return(
     <FormWrapper>
-      <Flex alignItems={'center'}>mailing list:</Flex>
+      <Flex justifyContent={'end'}>mailing list:</Flex>
       <form 
         name='mailing-list' 
         method='POST' 
-        data-netlify='true'>
+        data-netlify='true'
+      >
         <input type='hidden' name='form-name' value='mailing-list' />
         <input 
           type='text' 

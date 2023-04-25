@@ -5,12 +5,14 @@ import {theme} from '../../theme';
 
 export const FormWrapper = styled(Box)(
   {
-    display: 'flex',
-    flex: '1 0 50%',
+    gap: '5px',
     justifyContent: 'end',
     input: {
       border: 'none',
+      outline: 'none',
       background: 'black',
+      color: theme.colors.muted,
+      fontStyle: 'italic',
     },
     'input::placeholder': {
       color: theme.colors.dimGray,
@@ -21,8 +23,16 @@ export const FormWrapper = styled(Box)(
       border: 'none',
       color: theme.colors.muted,
     },
+    form: {
+      display: 'flex',
+      alignItems: 'end',
+      gap: '5px',
+    },
   },
   mediaQuery({
-
+    display: ['flex', 'block', 'flex'],
+    form: {
+      flexDirection: ['column', 'column', 'row'],
+    },
   })
 );
