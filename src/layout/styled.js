@@ -6,10 +6,11 @@ import {mediaQuery} from '../utils';
 export const HeaderWrapper = styled(Box)(
   {
     position: 'fixed',
-    left: '10px',
-    right: '10px',
+    left: '0',
+    right: '0',
     top: '0',
-    paddingBottom: theme.space[4],
+    padding: theme.space[2],
+    paddingTop: theme.space[1],
     color: props => (props.location === '/' ? theme.colors.muted : 'black'),
     'a:any-link': {
       color: props => (props.location === '/' ? theme.colors.muted : 'black'),
