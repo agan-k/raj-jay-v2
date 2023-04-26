@@ -1,11 +1,15 @@
+import PropTypes from 'prop-types';
 import {MenuIconWrapper} from './styled';
 
-export default function NavMenuIcon() {
+export default function NavMenuIcon({toggleNav}) {
   return (
-    <MenuIconWrapper>
+    <MenuIconWrapper onClick={() => toggleNav()}>
       <div></div>
       <div></div>
       <div></div>
     </MenuIconWrapper>
   );
+};
+NavMenuIcon.propTypes = {
+  toggleNav: PropTypes.func,
 };

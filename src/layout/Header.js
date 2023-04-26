@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Nav, NavMenuIcon} from '../components/nav';
 import {MailingListForm} from '../components/forms';
@@ -5,6 +6,11 @@ import {Flex, Box} from '../shared';
 import {HeaderWrapper} from './styled';
 
 export default function Header({location}) {
+  const [isOpenNav, setIsOpen] = useState(false);
+
+  function toggleNav() {
+    setIsOpen(!isOpenNav);
+  }
 
   return (
     <HeaderWrapper location={location}>
@@ -14,13 +20,13 @@ export default function Header({location}) {
       >
         <Flex alignItems={'center'} justifyContent={'space-between'}>
           RAJIV JAYAWEERA
-          <NavMenuIcon />
+          <NavMenuIcon toggleNav={toggleNav} />
         </Flex>
-        <Nav />
+        <Nav isOpenNav={isOpenNav} />
       </Box>
       <Flex justifyContent={'end'}>
       </Flex>
-      <MailingListForm />
+      <MailingListForm isOpenNav={isOpenNav} />
     </HeaderWrapper>
   );
 }

@@ -30,7 +30,11 @@ export const FormWrapper = styled(Box)(
     },
   },
   mediaQuery({
-    display: ['flex', 'block', 'flex'],
+    display: [
+      props => (props.isOpenNav ? 'flex' : 'none'), 
+      'block', 
+      'flex',
+    ],
     form: {
       flexDirection: ['column', 'column', 'row'],
     },

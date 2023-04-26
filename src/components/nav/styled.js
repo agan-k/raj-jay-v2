@@ -3,6 +3,17 @@ import {mediaQuery} from '../../utils';
 import {theme} from '../../theme';
 import {Box} from '../../shared';
 
+export const NavWrapper = styled(Box)(
+  {
+    height: props => (props.isOpen ? '100%' : '0px'),
+    overflow: 'hidden',
+  },
+  mediaQuery({
+    display: ['block', 'block', 'flex'],
+    flexWrap: 'wrap',
+  })
+);
+
 export const NavItem = styled('span')( 
   //https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/
   {

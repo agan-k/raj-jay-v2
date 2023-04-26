@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import {Flex} from '../../shared';
 import {FormWrapper} from './styled';
 
-export default function MailingListForm() {
+export default function MailingListForm({isOpenNav}) {
   return(
-    <FormWrapper>
+    <FormWrapper isOpenNav={isOpenNav}>
       <Flex justifyContent={'end'}>mailing list:</Flex>
       <form 
         name='mailing-list' 
@@ -26,3 +27,7 @@ export default function MailingListForm() {
     </FormWrapper>
   );
 }
+
+MailingListForm.propTypes = {
+  isOpenNav: PropTypes.bool,
+};
