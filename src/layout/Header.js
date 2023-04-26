@@ -26,7 +26,7 @@ export default function Header({location}) {
       </Box>
       <Flex justifyContent={'end'}>
       </Flex>
-      <MailingListForm isOpenNav={isOpenNav} />
+      <MailingListForm isOpenNav={isOpenNav} location={location} />
     </HeaderWrapper>
   );
 }

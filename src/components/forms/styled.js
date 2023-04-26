@@ -10,18 +10,18 @@ export const FormWrapper = styled(Box)(
     input: {
       border: 'none',
       outline: 'none',
-      background: 'black',
-      color: theme.colors.muted,
+      color: theme.colors.dimGray,
       fontStyle: 'italic',
+      background: theme.colors.lightGray,
     },
     'input::placeholder': {
-      color: theme.colors.dimGray,
+      color: theme.colors.grey,
       fontStyle: 'italic',
     },
     button: {
-      background: theme.colors.dimGray,
+      background: theme.colors.lightGray,
       border: 'none',
-      color: theme.colors.muted,
+      color: theme.colors.dimGray,
     },
     form: {
       display: 'flex',

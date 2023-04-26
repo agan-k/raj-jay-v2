@@ -6,7 +6,7 @@ export const theme = {
     red: 'red',
     darkRed: '#a61403',
     gray: '#dddddf',
-    lightGray: '#dbdbdb',
+    lightGray: '#b0b0b0',
     faintGray: '#efefef',
     dimGray: '#484848',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
