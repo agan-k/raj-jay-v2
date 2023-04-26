@@ -15,7 +15,7 @@ export const FormWrapper = styled(Box)(
       background: theme.colors.lightGray,
     },
     'input::placeholder': {
-      color: theme.colors.grey,
+      color: theme.colors.dimGray,
       fontStyle: 'italic',
     },
     button: {
