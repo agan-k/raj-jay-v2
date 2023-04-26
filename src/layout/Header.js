@@ -20,7 +20,7 @@ export default function Header({location}) {
       >
         <Flex alignItems={'center'} justifyContent={'space-between'}>
           RAJIV JAYAWEERA
-          <NavMenuIcon toggleNav={toggleNav} />
+          <NavMenuIcon location={location} toggleNav={toggleNav} />
         </Flex>
         <Nav isOpenNav={isOpenNav} toggleNav={toggleNav} />
       </Box>

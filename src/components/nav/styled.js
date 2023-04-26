@@ -43,9 +43,10 @@ export const MenuIconWrapper = styled(Box)(
   {
     'div': {
       width: '20px',
-      height: '2px',
-      background: 'white',
-      margin: theme.space[1],
+      height: '1px',
+      background: props => 
+        (props.location === '/' ? theme.colors.muted : 'black'),
+      margin: theme.space[2] -2,
     },
   },
   mediaQuery({

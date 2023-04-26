@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import {MenuIconWrapper} from './styled';
 
-export default function NavMenuIcon({toggleNav}) {
+export default function NavMenuIcon({toggleNav, location}) {
   return (
-    <MenuIconWrapper onClick={() => toggleNav()}>
+    <MenuIconWrapper location={location} onClick={() => toggleNav()}>
       <div></div>
       <div></div>
       <div></div>
@@ -12,4 +12,5 @@ export default function NavMenuIcon({toggleNav}) {
 };
 NavMenuIcon.propTypes = {
   toggleNav: PropTypes.func,
+  location: PropTypes.string,
 };
