@@ -12,7 +12,7 @@ export default function App() {
   useEffect(() => {
     setPath(location.pathname);
   }, [location]);
-  
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

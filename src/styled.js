@@ -6,11 +6,12 @@ import {mediaQuery} from './utils';
 
 export const Wrapper = styled(Box)(
   {
-    marginTop: theme.space[6],
     padding: '10px',
     minHeight: '100vh',
     background: props => 
       (props.location === '/' ? 'black' : theme.colors.background),
+    marginTop: props => 
+      (props.location === '/' ? '0' : `${theme.space[6]}px`),
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   },
