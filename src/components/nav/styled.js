@@ -6,11 +6,17 @@ import {Box} from '../../shared';
 export const NavWrapper = styled(Box)(
   {
     height: props => (props.isOpen ? '100%' : '0px'),
-    overflow: 'hidden',
   },
   mediaQuery({
     display: ['block', 'block', 'flex'],
     flexWrap: 'wrap',
+    height: [
+      props => (props.isOpen ? '100%' : '0px'),
+      props => (props.isOpen ? '100%' : '0px'),
+      '100%',
+    ],
+    overflow: ['hidden', 'hidden', ''],
+
   })
 );
 
