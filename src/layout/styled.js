@@ -31,17 +31,3 @@ export const FooterWrapper = styled(Box)(
     marginTop: [theme.space[6], theme.space[6], 'unset'],
   })
 );
-export const MenuIconWrapper = styled(Box)(
-  {
-    'div': {
-      width: '20px',
-      height: '2px',
-      background: 'white',
-      margin: theme.space[1],
-    },
-  },
-  mediaQuery({
-    display: ['', '', 'none'],
-
-  })
-);

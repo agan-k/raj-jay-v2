@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {mediaQuery} from '../../utils';
 import {theme} from '../../theme';
+import {Box} from '../../shared';
 
 export const NavItem = styled('span')( 
   //https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/
@@ -18,5 +19,20 @@ export const NavItem = styled('span')(
   },
   mediaQuery({
     textAlign: ['right', 'right', 'unset'],
+  })
+);
+
+export const MenuIconWrapper = styled(Box)(
+  {
+    'div': {
+      width: '20px',
+      height: '2px',
+      background: 'white',
+      margin: theme.space[1],
+    },
+  },
+  mediaQuery({
+    display: ['', '', 'none'],
+
   })
 );

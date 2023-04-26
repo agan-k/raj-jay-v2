@@ -1,20 +1,10 @@
 import PropTypes from 'prop-types';
-import {Nav} from '../components/nav';
+import {Nav, NavMenuIcon} from '../components/nav';
 import {MailingListForm} from '../components/forms';
 import {Flex, Box} from '../shared';
-import {HeaderWrapper, MenuIconWrapper} from './styled';
+import {HeaderWrapper} from './styled';
 
 export default function Header({location}) {
-
-  const MenuIcon = () => {
-    return (
-      <MenuIconWrapper>
-        <div></div>
-        <div></div>
-        <div></div>
-      </MenuIconWrapper>
-    );
-  };
 
   return (
     <HeaderWrapper location={location}>
@@ -24,7 +14,7 @@ export default function Header({location}) {
       >
         <Flex alignItems={'center'} justifyContent={'space-between'}>
           RAJIV JAYAWEERA
-          <MenuIcon />
+          <NavMenuIcon />
         </Flex>
         <Nav />
       </Box>
