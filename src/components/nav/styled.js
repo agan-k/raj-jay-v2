@@ -16,7 +16,6 @@ export const NavWrapper = styled(Box)(
       '100%',
     ],
     overflow: ['hidden', 'hidden', ''],
-
   })
 );
 
@@ -41,6 +40,8 @@ export const NavItem = styled('span')(
 
 export const MenuIconWrapper = styled(Box)(
   {
+    marginRight: -theme.space[1],
+    marginTop: theme.space[1] -1,
     'div': {
       width: '20px',
       height: '1px',

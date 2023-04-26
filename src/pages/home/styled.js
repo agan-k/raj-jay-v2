@@ -22,7 +22,6 @@ export const CTAWrapper = styled(Box)(
   },
   mediaQuery(
     {
-      background: ['rgba(0, 0, 0, 0.7)', 'black', 'none'],
       display: ['', '', 'flex'],
       gap: ['', '', theme.space[5]],
       width: ['100%', '', '70%'],

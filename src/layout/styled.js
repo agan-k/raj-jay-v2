@@ -9,12 +9,20 @@ export const HeaderWrapper = styled(Box)(
     'a:any-link': {
       color: props => (props.location === '/' ? theme.colors.muted : 'black'),
     },
-    'a:hover': {
-      color: theme.colors.primary,
-    },
+    position: 'fixed',
+    left: '10px',
+    right: '10px',
+    top: '0',
   },
   mediaQuery({
-
+    background: [
+      props => (props.location === '/' ? 'black' : 'white'),
+      props => (props.location === '/' ? 'black' : 'white'),
+      'none',
+    ],
+    'a:hover': {
+      color: ['', '', theme.colors.primary],
+    },
   })
 );
 export const FooterWrapper = styled(Box)(

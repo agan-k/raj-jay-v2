@@ -10,11 +10,15 @@ export const Wrapper = styled(Box)(
     minHeight: '100vh',
     background: props => 
       (props.location === '/' ? 'black' : theme.colors.background),
-    backgroundImage: props => 
-      (props.location === '/' ? `url('${banner}')` : ''),
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   },
   mediaQuery({
+    backgroundImage: [
+      '',
+      '',
+      props => 
+        (props.location === '/' ? `url('${banner}')` : ''),
+    ],
   })
 );
