@@ -22,7 +22,7 @@ export default function Header({location}) {
           RAJIV JAYAWEERA
           <NavMenuIcon toggleNav={toggleNav} />
         </Flex>
-        <Nav isOpenNav={isOpenNav} />
+        <Nav isOpenNav={isOpenNav} toggleNav={toggleNav} />
       </Box>
       <Flex justifyContent={'end'}>
       </Flex>
