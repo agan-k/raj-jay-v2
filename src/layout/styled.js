@@ -5,20 +5,21 @@ import {mediaQuery} from '../utils';
 
 export const HeaderWrapper = styled(Box)(
   {
-    color: props => (props.location === '/' ? theme.colors.muted : 'black'),
-    'a:any-link': {
-      color: props => (props.location === '/' ? theme.colors.muted : 'black'),
-    },
     position: 'fixed',
     left: '10px',
     right: '10px',
     top: '0',
+    paddingBottom: theme.space[4],
+    color: props => (props.location === '/' ? theme.colors.muted : 'black'),
+    'a:any-link': {
+      color: props => (props.location === '/' ? theme.colors.muted : 'black'),
+    },
   },
   mediaQuery({
     background: [
       props => (props.location === '/' ? 'black' : 'white'),
       props => (props.location === '/' ? 'black' : 'white'),
-      'none',
+      props => (props.location === '/' ? 'none' : 'white'),
     ],
     'a:hover': {
       color: ['', '', theme.colors.primary],
