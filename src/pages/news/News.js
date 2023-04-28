@@ -2,7 +2,7 @@ import {useAllPrismicDocumentsByType, PrismicRichText} from '@prismicio/react';
 import Masonry from 'react-masonry-css';
 import {masonryBreakpoints} from '../constants';
 import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
-import {Box} from '../../shared';
+import {Box, Flex} from '../../shared';
 
 export default function News() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -20,8 +20,10 @@ export default function News() {
   const topItems = firstThreeItems?.map((item, index) => {
     if(index > 0) {
       return(
-        <FeedItemWrapper key={item.id}>
-          <img src={item.data.image.url} width={'100%'} />
+        <FeedItemWrapper key={item.id} flex={'1 0 10%'}>
+          <Box maxHeight={'300px'} overflow={'hidden'}>
+            <img src={item.data.image.url} width={'100%'} />
+          </Box>
           <Box p={4} pt={0}>
             <h3>{item.data.date}</h3>
             <h2>{item.data.title}</h2>
@@ -31,7 +33,7 @@ export default function News() {
       );
     }
     return(
-      <FeedItemWrapper key={item.id} display={'flex'} >
+      <FeedItemWrapper key={item.id} display={'flex'} flex={'1 0 60%'} >
         <Box maxHeight={'300px'} overflow={'hidden'}>
           <img src={item.data.image.url} width={'100%'} />
         </Box>
@@ -46,9 +48,9 @@ export default function News() {
   );
   const TopFeedRow = () => {
     return (
-      <FeedItemWrapper display={'flex'} >
+      <Flex className="top-feed">
         {topItems}
-      </FeedItemWrapper>
+      </Flex>
     );
   };
 
@@ -73,7 +75,7 @@ export default function News() {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column">
           {feed}
-          {feed}
+          {/* {feed} */}
         </Masonry>
       </MasonryWrapper>
     </FeedWrapper>

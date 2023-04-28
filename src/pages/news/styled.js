@@ -37,8 +37,12 @@ export const FeedItemWrapper = styled(Box)(
     }
   )
 );
+    
 export const FeedWrapper = styled(Box)(
   {
+    '.top-feed': {
+      gap: theme.space[1],
+    },
   },
   mediaQuery(
     {
