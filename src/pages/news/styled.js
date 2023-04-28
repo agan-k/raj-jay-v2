@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {Box} from '../../shared';
 import {mediaQuery} from '../../utils';
 import {theme} from '../../theme';
+
 export const MasonryWrapper = styled(Box)(
   {
     '.my-masonry-grid': {
@@ -32,10 +33,7 @@ export const FeedItemWrapper = styled(Box)(
     {
       background: theme.colors.muted,
       color: 'black',
-      // border: `1px solid ${theme.colors.muted}`,
       marginBottom: theme.space[1],
-      // padding: theme.space[4],
-      // paddingTop: theme.space[1],
     }
   )
 );
