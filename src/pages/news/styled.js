@@ -24,6 +24,9 @@ export const MasonryWrapper = styled(Box)(
 );
 export const FeedItemWrapper = styled(Box)(
   {
+    background: theme.colors.muted,
+    color: 'black',
+    marginBottom: theme.space[1],
     p: {
       fontFamily: 'Open Sans',
       fontSize: theme.fontSizes[0],
@@ -31,9 +34,6 @@ export const FeedItemWrapper = styled(Box)(
   },
   mediaQuery(
     {
-      background: theme.colors.muted,
-      color: 'black',
-      marginBottom: theme.space[1],
     }
   )
 );
@@ -46,6 +46,23 @@ export const FeedWrapper = styled(Box)(
   },
   mediaQuery(
     {
+      '.first-feed-item': {
+        display: ['', '', 'flex'],
+        padding: ['', '', theme.space[5]],
+        p: {
+          fontSize: ['', '', theme.fontSizes[3]],
+        },
+        h1: {
+          fontSize: ['', '', theme.fontSizes[5]],
+        },
+        h2: {
+          fontSize: ['', '', theme.fontSizes[4]],
+        },
+        '.first-feed-item-img': {
+          maxHeight: ['', '', '400px'],
+          overflow: 'hidden',
+        },
+      },
     }
   )
 );

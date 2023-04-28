@@ -2,7 +2,7 @@ import {useAllPrismicDocumentsByType, PrismicRichText} from '@prismicio/react';
 import Masonry from 'react-masonry-css';
 import {masonryBreakpoints} from '../constants';
 import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
-import {Box, Flex} from '../../shared';
+import {Box, SmallHeading, LargeHeading} from '../../shared';
 
 export default function News() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -15,8 +15,8 @@ export default function News() {
       ],
     });
 
-  const filteredFeedData = feedData[0]?.filter((item, index) => index > 2);
-  const firstThreeItems = feedData[0]?.filter((item, index) => index < 3);
+  const filteredFeedData = feedData[0]?.filter((item, index) => index > 1);
+  const firstThreeItems = feedData[0]?.filter((item, index) => index < 2);
   const topItems = firstThreeItems?.map((item, index) => {
     if(index > 0) {
       return(
@@ -25,22 +25,29 @@ export default function News() {
             <img src={item.data.image.url} width={'100%'} />
           </Box>
           <Box p={4} pt={0}>
-            <h3>{item.data.date}</h3>
-            <h2>{item.data.title}</h2>
+            <SmallHeading>{item.data.date}</SmallHeading>
+            <SmallHeading>{item.data.title}</SmallHeading>
             <PrismicRichText field={item.data.description}/>
           </Box>
         </FeedItemWrapper>
       );
     }
     return(
-      <FeedItemWrapper key={item.id} display={'flex'} flex={'1 0 60%'} >
-        <Box maxHeight={'300px'} overflow={'hidden'}>
-          <img src={item.data.image.url} width={'100%'} />
-        </Box>
-        <Box p={4} pt={0}>
-          <h3>{item.data.date}</h3>
-          <h2>{item.data.title}</h2>
-          <PrismicRichText field={item.data.description}/>
+      <FeedItemWrapper 
+        className='first-feed-item'
+        key={item.id} 
+        flex={'1 0 60%'} 
+      >
+        <Box display={['', '', 'flex']} alignSelf={'center'}>
+          <Box className='first-feed-item-img'>
+            <img src={item.data.image.url} width={'100%'} />
+          </Box>
+          <Box p={4} pt={0}>
+            <SmallHeading>{item.data.date}</SmallHeading>
+            <LargeHeading>{item.data.title}</LargeHeading>
+            <PrismicRichText field={item.data.description}/>
+          </Box>
+
         </Box>
       </FeedItemWrapper>
     );
@@ -48,9 +55,9 @@ export default function News() {
   );
   const TopFeedRow = () => {
     return (
-      <Flex className="top-feed">
+      <Box display={['', '', 'flex']} className='top-feed'>
         {topItems}
-      </Flex>
+      </Box>
     );
   };
 
@@ -58,8 +65,8 @@ export default function News() {
     <FeedItemWrapper key={item.id}>
       <img src={item.data.image.url} width={'100%'} />
       <Box p={4} pt={0}>
-        <h3>{item.data.date}</h3>
-        <h2>{item.data.title}</h2>
+        <SmallHeading>{item.data.date}</SmallHeading>
+        <LargeHeading>{item.data.title}</LargeHeading>
         <PrismicRichText field={item.data.description}/>
       </Box>
     </FeedItemWrapper>
