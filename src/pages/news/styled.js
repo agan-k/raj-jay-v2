@@ -5,6 +5,7 @@ import {theme} from '../../theme';
 
 export const MasonryWrapper = styled(Box)(
   {
+    marginBottom: theme.space[7],
     '.my-masonry-grid': {
       display: '-webkit-box',
       display: '-ms-flexbox',
