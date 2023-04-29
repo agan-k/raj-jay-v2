@@ -25,7 +25,6 @@ export const MasonryWrapper = styled(Box)(
 );
 export const FeedItemWrapper = styled(Box)(
   {
-    background: theme.colors.muted,
     color: 'black',
     marginBottom: theme.space[1],
     p: {

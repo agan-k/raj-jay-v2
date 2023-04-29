@@ -3,6 +3,8 @@ import Masonry from 'react-masonry-css';
 import {masonryBreakpoints} from '../constants';
 import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
 import {Box, SmallHeading, LargeHeading} from '../../shared';
+import {theme} from '../../theme';
+import {assignRandomBackground} from '../../utils';
 
 export default function News() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -23,7 +25,8 @@ export default function News() {
         <FeedItemWrapper 
           className='first-feed-item'
           key={item.id} 
-          flex={'1 0 60%'} 
+          flex={'1 0 60%'}
+          backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
         >
           <Box display={['', '', 'flex']} alignSelf={'center'}>
             <Box className='first-feed-item-img'>
@@ -40,7 +43,11 @@ export default function News() {
       );
     }
     return(
-      <FeedItemWrapper key={item.id} flex={'1 0 10%'}>
+      <FeedItemWrapper 
+        key={item.id} 
+        flex={'1 0 10%'}
+        backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
+      >
         <Box p={4}>
           <Box maxHeight={'300px'} overflow={'hidden'}>
             <img src={item.data.image.url} width={'100%'} />
@@ -62,11 +69,14 @@ export default function News() {
   };
 
   const feed = filteredFeedData?.map((item) =>
-    <FeedItemWrapper key={item.id}>
+    <FeedItemWrapper 
+      key={item.id} 
+      backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
+    >
       <Box p={2}>
         <img src={item.data.image.url} width={'100%'} />
         <SmallHeading>{item.data.date}</SmallHeading>
-        <LargeHeading>{item.data.title}</LargeHeading>
+        <SmallHeading>{item.data.title}</SmallHeading>
         <PrismicRichText field={item.data.description}/>
       </Box>
     </FeedItemWrapper>
@@ -82,7 +92,7 @@ export default function News() {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column">
           {feed}
-          {/* {feed} */}
+          {feed}
         </Masonry>
       </MasonryWrapper>
     </FeedWrapper>
