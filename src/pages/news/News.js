@@ -4,7 +4,7 @@ import {masonryBreakpoints} from '../constants';
 import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
 import {Box, SmallHeading, LargeHeading} from '../../shared';
 import {theme} from '../../theme';
-import {assignRandomBackground, pickRandomColor} from '../../utils';
+import {pickRandomColor} from '../../utils';
 
 export default function News() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -16,17 +16,23 @@ export default function News() {
         },
       ],
     });
-
+  
   const filteredFeedData = feedData[0]?.filter((item, index) => index > 1);
   const firstTwoItems = feedData[0]?.filter((item, index) => index < 2);
+  let RECORD_LAST_BACKGROUND_COLOR = [''];
+
   const topItems = firstTwoItems?.map((item, index) => {
+    RECORD_LAST_BACKGROUND_COLOR.unshift(pickRandomColor({
+      arr: theme.masonryBackgrounds, avoid: RECORD_LAST_BACKGROUND_COLOR[0]}));
+    RECORD_LAST_BACKGROUND_COLOR.pop();
+    const backgroundColor = RECORD_LAST_BACKGROUND_COLOR[0];
     if(index === 0) {
       return(
         <FeedItemWrapper 
           className='first-feed-item'
           key={item.id} 
           flex={'1 0 60%'}
-          backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
+          backgroundColor={backgroundColor}
         >
           <Box display={['', '', 'flex']} alignSelf={'center'}>
             <Box className='first-feed-item-img'>
@@ -46,7 +52,7 @@ export default function News() {
       <FeedItemWrapper 
         key={item.id} 
         flex={'1 0 10%'}
-        backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
+        backgroundColor={backgroundColor}
       >
         <Box p={4}>
           <Box maxHeight={'300px'} overflow={'hidden'}>
@@ -68,15 +74,15 @@ export default function News() {
     );
   };
   
-  let recordLastColor = [''];
   const feed = filteredFeedData?.map((item) => {
-    recordLastColor.unshift(pickRandomColor({
-      arr: theme.masonryBackgrounds, avoid: recordLastColor[0]}));
-    recordLastColor.pop();
+    RECORD_LAST_BACKGROUND_COLOR.unshift(pickRandomColor({
+      arr: theme.masonryBackgrounds, avoid: RECORD_LAST_BACKGROUND_COLOR[0]}));
+    RECORD_LAST_BACKGROUND_COLOR.pop();
+    const backgroundColor = RECORD_LAST_BACKGROUND_COLOR[0];
     return(
       <FeedItemWrapper 
         key={item.id} 
-        backgroundColor={recordLastColor[0]}
+        backgroundColor={backgroundColor}
       >
         <Box p={2}>
           <img src={item.data.image.url} width={'100%'} />
