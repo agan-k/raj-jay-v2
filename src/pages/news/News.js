@@ -4,7 +4,7 @@ import {masonryBreakpoints} from '../constants';
 import {FeedItemWrapper, FeedWrapper, MasonryWrapper} from './styled';
 import {Box, SmallHeading, LargeHeading} from '../../shared';
 import {theme} from '../../theme';
-import {assignRandomBackground} from '../../utils';
+import {assignRandomBackground, pickRandomColor} from '../../utils';
 
 export default function News() {
   const feedData = useAllPrismicDocumentsByType('feed_item', 
@@ -67,20 +67,26 @@ export default function News() {
       </Box>
     );
   };
-
-  const feed = filteredFeedData?.map((item) =>
-    <FeedItemWrapper 
-      key={item.id} 
-      backgroundColor={assignRandomBackground(theme.masonryBackgrounds)}
-    >
-      <Box p={2}>
-        <img src={item.data.image.url} width={'100%'} />
-        <SmallHeading>{item.data.date}</SmallHeading>
-        <SmallHeading>{item.data.title}</SmallHeading>
-        <PrismicRichText field={item.data.description}/>
-      </Box>
-    </FeedItemWrapper>
-  );
+  
+  let recordLastColor = [''];
+  const feed = filteredFeedData?.map((item) => {
+    recordLastColor.unshift(pickRandomColor({
+      arr: theme.masonryBackgrounds, avoid: recordLastColor[0]}));
+    recordLastColor.pop();
+    return(
+      <FeedItemWrapper 
+        key={item.id} 
+        backgroundColor={recordLastColor[0]}
+      >
+        <Box p={2}>
+          <img src={item.data.image.url} width={'100%'} />
+          <SmallHeading>{item.data.date}</SmallHeading>
+          <SmallHeading>{item.data.title}</SmallHeading>
+          <PrismicRichText field={item.data.description}/>
+        </Box>
+      </FeedItemWrapper>
+    );
+  });
   
   return (
     <FeedWrapper>
@@ -91,7 +97,6 @@ export default function News() {
           breakpointCols={masonryBreakpoints(6)}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column">
-          {feed}
           {feed}
         </Masonry>
       </MasonryWrapper>
