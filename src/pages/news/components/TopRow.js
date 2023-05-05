@@ -25,7 +25,7 @@ export default function TopRow({feedData}) {
           backgroundColor={backgroundColor}
         >
           <Box display={['', '', 'flex']} alignSelf={'center'}>
-            <Box className='first-feed-item-img'>
+            <Box p={[2, '', '']} className='first-feed-item-img'>
               <img src={item.data.image.url} width={'100%'} />
             </Box>
             <Box p={4} pt={0}>
