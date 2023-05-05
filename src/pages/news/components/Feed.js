@@ -24,7 +24,8 @@ export default function Feed() {
 
   const feed = filteredFeedData?.map((item) => {
     RECORD_LAST_BACKGROUND_COLOR.unshift(pickRandomColor({
-      arr: theme.masonryBackgrounds, avoid: RECORD_LAST_BACKGROUND_COLOR[0]}));
+      arr: theme.masonryBackgrounds, 
+      avoidConsecutive: RECORD_LAST_BACKGROUND_COLOR[0]}));
     RECORD_LAST_BACKGROUND_COLOR.pop();
     const backgroundColor = RECORD_LAST_BACKGROUND_COLOR[0];
 

@@ -5,5 +5,5 @@ export default function pickRandomItem({arr, avoidConsecutive = ''}) {
   if(items[randomIndex] !== item) {
     return arr[randomIndex];
   }
-  return pickRandomItem({arr, avoidConsecutive});
+  return pickRandomItem({arr: items, avoidConsecutive: item});
 };

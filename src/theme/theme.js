@@ -2,7 +2,6 @@ export const theme = {
   breakpoints: ['480px', '769px', '1100px'],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   masonryBackgrounds: [
-    '#F2EEE4', 
     '#DDE8D7', 
     '#F2EEE4', 
     '#2B90B9', 

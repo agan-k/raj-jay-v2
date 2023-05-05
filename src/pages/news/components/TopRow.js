@@ -9,11 +9,12 @@ export default function TopRow({feedData}) {
   const firstTwoItems = feedData[0]?.filter((item, index) => index < 2);
 
   let RECORD_LAST_BACKGROUND_COLOR = [''];
-
   const topItems = firstTwoItems?.map((item, index) => {
     RECORD_LAST_BACKGROUND_COLOR.unshift(pickRandomColor({
-      arr: theme.masonryBackgrounds, avoid: RECORD_LAST_BACKGROUND_COLOR[0]}));
+      arr: theme.masonryBackgrounds, 
+      avoidConsecutive: RECORD_LAST_BACKGROUND_COLOR[0]}));
     RECORD_LAST_BACKGROUND_COLOR.pop();
+
     const backgroundColor = RECORD_LAST_BACKGROUND_COLOR[0];
     if(index === 0) {
       return(
