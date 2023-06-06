@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle(
   {
     body: {
       position: 'relative',
-      fontFamily: `${theme.fonts.main}, -apple-system, sans-serif`,
+      fontFamily: theme.fonts.main,
       letterSpacing: '2px',
       margin: '0 auto',
       'a:any-link': {
